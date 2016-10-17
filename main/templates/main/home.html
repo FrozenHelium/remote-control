@@ -46,6 +46,7 @@
                 <a id="vlc-volume-dec" >▼</a>
                 <a id="vlc-volume-inc" >▲</a>
             </div>
+            <hr>
             <h3>Misc</h3>
             <div id="vlc-misc">
                 <a id="vlc-subtitles">Toggle Subtitles</a>
@@ -77,12 +78,10 @@
                 <a id="space">space</a>
                 <a id="return">return</a>
             </div>
+            <hr>
             <div>
-                Enter a character:
-                <br>
-                <input id="character" onkeyup="onCharacterInput(event);" type="password">
-                <br>
-                (Not all characters are supported)
+                <input id="character" onkeyup="onCharacterInput(event);" type="password" placeholder="Enter text">
+                <p>Some characters may not be supported</p>
             </div>
         </section>
         <section id="mouse">

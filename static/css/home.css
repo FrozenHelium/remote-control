@@ -79,6 +79,7 @@ a:active{
 }
 
 #character{
-    width: 20px;
-    text-align: center;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    width: calc(100%-24px);
+    padding: 6px 16px;
 }
