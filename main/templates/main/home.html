@@ -1,0 +1,88 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+
+    <title>Remote Control</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300,400" rel="stylesheet">
+    <link href="{% static 'css/home.css' %}" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Remote Control</h1>
+    </header>
+    <main>
+        <section id="volume">
+            <h2>Volume</h2>
+            <hr>
+            <div>
+                <a id="vol-decrease">▼</a>
+                <a id="vol-increase">▲</a>
+            </div>
+        </section>
+
+        <section id="vlc-shortcut">
+            <h2>VLC Shortcut</h2>
+            <hr>
+            <a id="vlc-play-pause">Play/Pause</a>
+            <hr>
+            <h3>Seek</h3>
+            <div id="vlc-seek">
+                <div><a id="vlc-seek-backward-low"><</a><a id="vlc-seek-forward-low">></a></div>
+                <div><a id="vlc-seek-backward-medium"><<</a><a id="vlc-seek-forward-medium">>></a></div>
+                <div><a id="vlc-seek-backward-high"><<<</a><a id="vlc-seek-forward-high">>>></a></div>
+            </div>
+            <hr>
+            <h3>Volume</h3>
+            <div id="vlc-volume">
+                <a id="vlc-volume-inc" >▲</a>
+                <a id="vlc-volume-dec" >▼</a>
+            </div>
+        </section>
+
+        <section id="keyboard">
+            <h2>Keyboard</h2>
+            <hr>
+            <div id="modifiers">
+                <label class="modifier"><input id="ctrl" type="checkbox"><span>Ctrl</span></label>
+                <label class="modifier"><input id="alt" type="checkbox"><span>Alt</span></label>
+                <label class="modifier"><input id="shift" type="checkbox"><span>Shift</span></label>
+                <label class="modifier"><input id="win" type="checkbox"><span>Win</span></label>
+            </div>
+            <hr>
+            <div id="arrow-keys">
+                <div>
+                    <a id="up" >↑</a>
+                </div>
+                <div>
+                    <a id="left" >←</a>
+                    <a id="down" >↓</a>
+                    <a id="right" >→</a>
+                </div>
+            </div>
+            <hr>
+            <div id="keypad-keys">
+                <a id="space">space</a>
+                <a id="return">return</a>
+            </div>
+        </section>
+        <section id="mouse">
+            <h2>Mouse</h2>
+            <hr>
+            <div>
+                <canvas id="pointer"></canvas>
+            </div>
+            <div>
+                <a id="mouse-left-click">left</a>
+                <a id="mouse-right-click">right</a>
+            </div>
+        </section>
+    </main>
+    <script src="{% static 'js/home.js' %}"></script>
+</body>
