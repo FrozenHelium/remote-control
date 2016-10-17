@@ -2,6 +2,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
+    url(r'^', include('main.urls')),
     url(r'^main/', include('main.urls')),
     url(r'^volume/', include('volume.urls')),
     url(r'^keyboard/', include('keyboard.urls')),

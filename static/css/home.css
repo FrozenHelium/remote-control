@@ -77,3 +77,8 @@ a:active{
     height: 240px;
     background-color: #ccc;
 }
+
+#character{
+    width: 20px;
+    text-align: center;
+}

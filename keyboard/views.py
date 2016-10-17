@@ -6,6 +6,10 @@ from pykeyboard import PyKeyboard
 
 k = PyKeyboard()
 
+def tap_character(response, character):
+    k.tap_key(character)
+    return JsonResponse({'status':'success', 'msg': character + ' key pressed'})
+
 def tap_left_key(response):
     k.tap_key(k.left_key)
     return JsonResponse({'status':'success', 'msg':'left key pressed'})
@@ -29,6 +33,11 @@ def tap_space_key(response):
 def tap_return_key(response):
     k.tap_key(k.return_key)
     return JsonResponse({'status':'success', 'msg':'space key pressed'})
+
+def tap_backspace_key(response):
+    k.tap_key(k.backspace_key)
+    return JsonResponse({'status':'success', 'msg':'backspace key pressed'})
+
 
 def press_ctrl_key(response):
     k.press_key(k.control_key)

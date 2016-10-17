@@ -30,19 +30,25 @@
         <section id="vlc-shortcut">
             <h2>VLC Shortcut</h2>
             <hr>
-            <a id="vlc-play-pause">Play/Pause</a>
+            <div>
+                <a id="vlc-play-pause">Play/Pause</a>
+            </div>
             <hr>
             <h3>Seek</h3>
             <div id="vlc-seek">
-                <div><a id="vlc-seek-backward-low"><</a><a id="vlc-seek-forward-low">></a></div>
-                <div><a id="vlc-seek-backward-medium"><<</a><a id="vlc-seek-forward-medium">>></a></div>
-                <div><a id="vlc-seek-backward-high"><<<</a><a id="vlc-seek-forward-high">>>></a></div>
+                <div><a id="vlc-seek-backward-low">&lt;</a><a id="vlc-seek-forward-low">&gt;</a></div>
+                <div><a id="vlc-seek-backward-medium">&lt;&lt;</a><a id="vlc-seek-forward-medium">&gt;&gt;</a></div>
+                <div><a id="vlc-seek-backward-high">&lt;&lt;&lt;</a><a id="vlc-seek-forward-high">&gt;&gt;&gt;</a></div>
             </div>
             <hr>
             <h3>Volume</h3>
             <div id="vlc-volume">
-                <a id="vlc-volume-inc" >▲</a>
                 <a id="vlc-volume-dec" >▼</a>
+                <a id="vlc-volume-inc" >▲</a>
+            </div>
+            <h3>Misc</h3>
+            <div id="vlc-misc">
+                <a id="vlc-subtitles">Toggle Subtitles</a>
             </div>
         </section>
 
@@ -70,6 +76,13 @@
             <div id="keypad-keys">
                 <a id="space">space</a>
                 <a id="return">return</a>
+            </div>
+            <div>
+                Enter a character:
+                <br>
+                <input id="character" onkeyup="onCharacterInput(event);" type="password">
+                <br>
+                (Not all characters are supported)
             </div>
         </section>
         <section id="mouse">

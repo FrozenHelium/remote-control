@@ -57,6 +57,24 @@ document.getElementById("vlc-volume-dec").onclick = function() {
     makeRequest("/keyboard/tap_down_key");
     makeRequest("/keyboard/release_ctrl_key");
 };
+document.getElementById("vlc-subtitles").onclick = function() {
+    makeRequest("/keyboard/tap_character/v/");
+};
+
+
+function onCharacterInput(event) {
+    if (event.which == 8) {   // backspace
+        makeRequest("/keyboard/tap_backspace_key");
+        return;
+    }
+    if (event.which == 10 || event.which == 13) {   // enter
+        makeRequest("/keyboard/tap_return_key");
+        return;
+    }
+    var el = document.getElementById("character");
+    makeRequest("/keyboard/tap_character/" + el.value.substr(0,1) + "/");
+    el.value = "";
+};
 
 
 //mouse
